@@ -1,0 +1,25 @@
+{% extends 'home.html' %}
+
+{% block content %}
+    <div class="inp">
+        <form action="" method="POST">
+            {% csrf_token %}
+
+            <label for="title">TITLE</label><br>
+            <input id="title" type="text" placeholder="Enter the title" name="title" value="{{ k.title }}"><br>
+
+            <label for="description">DESCRIPTION</label><br>
+            <textarea id="description" name="description" rows="4" placeholder="Enter the description">{{ k.description }}</textarea><br>
+
+            <label for="status">STATUS</label><br>
+            <select id="status" name="status">
+                {% for value, label in status_choices %}
+                    <option value="{{ value }}" {% if k.status == value %}selected{% endif %}>{{ label }}</option>
+                {% endfor %}
+            </select>
+
+            <br>
+            <button type="submit">SUBMIT</button>
+        </form>
+    </div>
+{% endblock %}

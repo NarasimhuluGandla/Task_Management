@@ -1,0 +1,30 @@
+{% load static %}
+{% load socialaccount %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'base.css' %}">
+    <title>TaskManagement</title>
+</head>
+<body>
+    <div class="log">
+        <div class="sigin">
+            <div class="heading">
+                <h2>Login Here</h2>
+            </div>
+            <div class="details">
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    <label id="labelname" for="">Username</label><br>
+                    <input id="inpname" type="text" name="username"><br>
+                    <label id="labelname" for="">Password</label><br>
+                    <input id="inpname" type="password" name="password"><br>
+                    <button>Submit</button><a href="{% url 'register' %}">Signup</a><br>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

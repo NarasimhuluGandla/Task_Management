@@ -1,0 +1,30 @@
+{% extends 'home.html' %}
+
+{% block content %}
+<div class="data">
+    <div class="table-container">
+        <table>
+            <tr id="heading">
+                <th id="title">TITLE</th>
+                <th id="desc">DESCRIPTION</th>
+                <th id="status">STATUS</th>
+                <th id="upd">UPDATE</th>
+                <th id="del">DELETE</th>
+            </tr>
+            {% for i in b %}
+            <tr id="content">
+                <td id="title">{{ i.title }}</td>
+                <td id="desc">{{ i.description }}</td>
+                <td id="status">{{ i.get_status_display }}</td>
+                <td id="upd"><a href="{% url 'restore' i.id %}">RESTORE</a></td>
+                <td id="del"><a href="{% url 'del' i.id %}">DELETE</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+    <div class="ALL">
+        <a id="restoreall" href="{% url 'restoreall' %}">RESTORE ALL</a>
+        <a id="deleteall" href="{% url 'deleteall' %}">DELETE ALL</a>
+    </div>
+</div>
+{% endblock %}

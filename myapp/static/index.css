@@ -1,0 +1,216 @@
+body{
+    background-color:rgb(211, 219, 213);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+*{
+    padding:0px;
+    margin:0px;
+}
+.logo{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    margin: 10px;
+    text-shadow: 0px 5px 7px grey ;
+    color:rgb(14, 7, 7);
+ 
+}
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color:rgb(165, 110, 59);
+    height: 70px;
+    flex-wrap: wrap;
+    padding: 6px 0;
+}
+.navbar a{
+    text-decoration: none;
+    color: blue;
+    padding: 18px 0px 18px 0px;
+    color: white;
+}
+.navbar a:hover{
+    color:black;
+    border-bottom: 3px solid rgb(85, 9, 9);
+}
+footer{
+    margin-top: 10px;
+    text-align: center;
+    background-color: yellowgreen;
+    color: red;
+}
+
+.table-container{
+    width: 100%;
+    overflow-x: auto;
+}
+
+table{
+    margin-top: 10px;
+    width: 100%;
+    min-width: 720px;
+    border: 2px solid black;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+th,td{
+    border: 1px solid black;
+    padding: 20px;
+    text-align: center;
+}
+#heading{
+    background-color:thistle;
+    color:rgb(10, 1, 1);
+}
+#content{
+    background-color: rgb(190, 194, 207);
+    
+}
+#desc{
+    width: 55%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+#title{
+    width: 15%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+#status{
+    width: 15%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+#del,#upd{
+    width: 7.5%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+#upd a:hover{
+    color: blue;
+}
+#del a:hover{
+    color: red;
+}
+
+.ALL{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content:space-evenly;
+}
+.ALL>a,#upd>a,#del>a{
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    text-decoration: none;
+    /* border: 2px solid gray; */
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: steelblue;
+    color: white
+}
+.ALL>a{
+    background-color: rgb(19, 218, 36);
+    color: white
+}
+#restoreall:hover{
+    color: brown;
+}
+#deleteall:hover{
+    color: brown;
+}
+
+
+form{
+    margin-top: 30px;
+    font-size: 25px;
+    text-align: center;
+    height: 350px;
+}
+.inp label{
+    border: 2px solid grey;
+    border-radius: 10px;
+    background-color: rgb(155, 118, 118);
+    font-size: 20px;
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 5px;
+    margin-bottom: 5px;
+    border: none;
+}
+.inp input,
+.inp textarea,
+.inp select{
+    margin-top: 8px;
+    border-radius: 10px;
+    font-size: 16px;
+    color: black;
+    padding: 10px;
+    border: none;
+    outline: none;
+    width: min(600px, 90vw);
+}
+.inp textarea{
+    resize: vertical;
+}
+button{
+    width: 120px;
+    height: 34px;
+    border-radius: 10px;
+    border: none;
+    background-color: steelblue;
+    color: white;
+}
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(19, 7, 7, 0.411);
+    margin: 10px 170px 10px 170px;
+    height: 70vh;
+}
+.text{
+    width: 750px;
+    font-size: 25px;
+}
+#about_heading{
+    color:rgb(96, 7, 168);
+    font-weight: 700;
+}
+#tit{
+    color: rgb(18, 180, 18);
+    font-weight: 700;
+}
+#par{
+    color: rgb(37, 40, 46);
+    font-weight: 600;
+}
+
+@media (max-width: 640px){
+    .navbar{
+        height: auto;
+        gap: 8px;
+    }
+
+    th,td{
+        padding: 12px;
+    }
+
+    form{
+        font-size: 20px;
+        height: auto;
+    }
+
+    .about{
+        margin: 10px;
+        height: auto;
+    }
+
+    .text{
+        width: auto;
+        padding: 10px;
+    }
+}

@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'base.css' %}">
+    <title>TaskManagement</title>
+</head>
+<body id="body">
+    <div class="logreg">
+        <div class="siginreg">
+            <div class="heading">
+                <h2>Register Here</h2>
+            </div>
+            <div class="detailsreg">
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    <label id="labelnamereg" for="">Username</label><br>
+                    <input id="inpnamereg" type="text" name="username"><br>
+                    <label id="labelnamereg" for="">Password</label><br>
+                    <input id="inpnamereg" type="text" name="password"><br>
+                    <button>Submit</button><br>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
