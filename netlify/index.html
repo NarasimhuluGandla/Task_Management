@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Task Manager</title>
+    <style>
+      body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 40px; line-height: 1.5; }
+      .card { max-width: 720px; padding: 24px; border: 1px solid #ddd; border-radius: 12px; }
+      code { background: #f6f8fa; padding: 2px 6px; border-radius: 6px; }
+      a { color: #0b5fff; }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h1>Task Manager</h1>
+      <p>
+        This is a static Netlify site.
+        The Django application (UI + API) is deployed separately on Render.
+      </p>
+
+      <h2>Open the app</h2>
+      <p>
+        After you deploy on Render, update the link below:
+      </p>
+      <ul>
+        <li>
+          App UI: <a id="appLink" href="#">(set your Render URL here)</a>
+        </li>
+        <li>
+          API: <a id="apiLink" href="#">(set your Render URL here)/api/tasks/</a>
+        </li>
+      </ul>
+
+      <h2>Note</h2>
+      <p>
+        Netlify does not run the Django server; it only hosts this static page.
+      </p>
+
+      <script>
+        // Replace this with your Render URL after deployment, e.g.
+        // const RENDER_URL = "https://your-service.onrender.com";
+        const RENDER_URL = "";
+        if (RENDER_URL) {
+          document.getElementById("appLink").href = RENDER_URL;
+          document.getElementById("appLink").textContent = RENDER_URL;
+          document.getElementById("apiLink").href = RENDER_URL + "/api/tasks/";
+          document.getElementById("apiLink").textContent = RENDER_URL + "/api/tasks/";
+        }
+      </script>
+    </div>
+  </body>
+</html>
